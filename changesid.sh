@@ -15,7 +15,7 @@ mkdir -p $saveDir
 # Valid options are: none,wallpaper,centered,scaled,stretched,zoom,span ned
 picOpts="stretched"
 
-# The desired Bing picture resolution to download
+# The desired nsg picture resolution to download
 # Valid options: "_1024x768" "_1280x720" "_1366x768" "_1920x1200"
 picRes="_1280x72"
 picExt=".jpg"
@@ -23,10 +23,10 @@ picExt=".jpg"
 
 picURL=$nsg$(echo $(curl -s $xmlURL) | grep -oP "<urlBase>(.*)</urlBase>" | cut -d ">" -f 2 | cut -d "<" -f 1)$picRes$picExt
 
-# $picName contains the filename of the Bing pic of the day
+# $picName contains the filename of the nsg pic of the day
 picName=${picURL#*2f}
 
-# Download the Bing pic of the day
+# Download the nsg pic of the day
 curl --create-dirs -s -o $saveDir$picName $picURL
 
 # Set the GNOME3 wallpaper
