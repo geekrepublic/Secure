@@ -177,7 +177,6 @@ sudo usermod -a -G sudo nsg
 Sleep 3
 ECHO "CHANGING SID SIGNATURES PLEASE WAIT"
 ECHO "GRAB A CUP OF COFFEE AND WAIT"
-
 # High Alerts Change
 ##Echo "Public Access UDP"
 mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 2101411;"
