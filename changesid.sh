@@ -21,7 +21,6 @@ picOpts="stretched"
 picRes="_1280x72"
 picExt=".jpg"
 
-
 picURL=$nsg$(echo $(curl -s $xmlURL) | grep -oP "<urlBase>(.*)</urlBase>" | cut -d ">" -f 2 | cut -d "<" -f 1)$picRes$picExt
 
 # $picName contains the filename of the nsg pic of the day
