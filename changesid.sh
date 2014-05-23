@@ -9,6 +9,9 @@ sleep 5
 echo "Adding NSG to Root permissions"
 sudo usermod -a -G sudo nsg
 sleep 3
+echo "Starting Install script"
+sudo soup
+sleep 3
 echo "CHANGING SID SIGNATURES PLEASE WAIT"
 echo "GRAB A CUP OF COFFEE AND WAIT"
 # High Alerts Change
