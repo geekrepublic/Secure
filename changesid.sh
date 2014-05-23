@@ -1,12 +1,16 @@
 #!/bin/bash/
+#
 echo "setup is now running - Watch for prompts"
+
 echo "setting desktop size"
+
 xrandr -s 1280x768
+
 sleep 20
+
 # $URL
-mkdir leaf
-sudo wget -o /leaf http://nsgllc.com/wp-content/uploads/2014/05/Wallpaper.jpg
-gsettings set org.gnome.desktop.background picture-uri file:///home/nsg/Desktop/leaf/Wallpaper.jpg
+wget http://nsgllc.com/wp-content/uploads/2014/05/Wallpaper.jpg
+gsettings set org.gnome.desktop.background picture-uri file:///home/nsg/Desktop/Wallpaper.jpg
 
 #
 sudo apt-get install figlet
