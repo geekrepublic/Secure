@@ -1,5 +1,4 @@
-!/bin/bash/
-#
+#!/bin/bash/
 echo "                                                                                                                                                                          " #red
 echo "                                                                                                                                                     '                     " #red
 echo "                                                                                                                                                    ''                     "  #red
