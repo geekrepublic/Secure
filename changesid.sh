@@ -7,34 +7,9 @@ nsg="www.nsgllc.com"
 
 # $URL
 sudo wget -O /leaf http://nsgllc.com/wp-content/uploads/2014/05/Wallpaper.jpg
-saveDir=$HOME'/leaf'
+gsettings set org.gnome.desktop.background picture-uri file:///home/nsg/Desktop/leaf/Wallpaper.jpg
 
-# Create saveDir if it does not already exist
-mkdir -p $saveDir
-
-# Set picture options
-# Valid options are: none,wallpaper,centered,scaled,stretched,zoom,span ned
-picOpts="stretched"
-
-# The desired nsg picture resolution to download
-# Valid options: "_1024x768" "_1280x720" "_1366x768" "_1920x1200"
-picRes="_1280x72"
-picExt=".jpg"
-
-picURL=$nsg$(echo $(curl -s $xmlURL) | grep -oP "<urlBase>(.*)</urlBase>" | cut -d ">" -f 2 | cut -d "<" -f 1)$picRes$picExt
-
-# $picName contains the filename of the nsg pic of the day
-picName=${picURL#*2f}
-
-# Download the nsg pic of the day
-curl --create-dirs -s -o $saveDir$picName $picURL
-
-# Set the GNOME3 wallpaper
-DISPLAY=:0 GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.background picture-uri '"file://'$saveDir$picName'"'
-
-# Set the GNOME 3 wallpaper picture options
-DISPLAY=:0 GSETTINGS_BACKEND=dconf gsettings set org.gnome.desktop.background picture-options $picOpts
-# start install
+#
 sudo apt-get install figlet
 sleep 3
 figlet LEAF BY NSG
