@@ -7,7 +7,7 @@ nsg="www.nsgllc.com"
 
 # $URL
 wget  -O /Pictures "http://nsgllc.com/wp-content/uploads/2014/05/Wallpaper.jpg"
-saveDir=$HOME'/Pictures/nsg'
+saveDir=$HOME'/Pictures/leaf'
 
 # Create saveDir if it does not already exist
 mkdir -p $saveDir
