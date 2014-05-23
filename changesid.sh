@@ -1,5 +1,6 @@
 #!/bin/bash/
 echo "setup is now running - Watch for prompts"
+xrandr -s 1280x768
 # $nsg is needed to form the fully qualified URL for
 # the LEAF Wallpaper
 nsg="www.nsgllc.com"
