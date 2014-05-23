@@ -1,19 +1,18 @@
 #!/bin/bash/
 echo "setup is now running - Watch for prompts"
+echo "setting desktop size"
 xrandr -s 1280x768
-# $nsg is needed to form the fully qualified URL for
-# the LEAF Wallpaper
-nsg="www.nsgllc.com"
-
+sleep 20
 # $URL
-sudo wget -O /leaf http://nsgllc.com/wp-content/uploads/2014/05/Wallpaper.jpg
+mkdir leaf
+sudo wget -o /leaf http://nsgllc.com/wp-content/uploads/2014/05/Wallpaper.jpg
 gsettings set org.gnome.desktop.background picture-uri file:///home/nsg/Desktop/leaf/Wallpaper.jpg
 
 #
 sudo apt-get install figlet
 sleep 3
 figlet LEAF BY NSG
-figlet Powered By Snort
+figlet Powered By Snortxrand
 figlet Designed by Alex Berta
 echo "Please Wait Starting Now"
 sleep 5
