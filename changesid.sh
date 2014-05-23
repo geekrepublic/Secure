@@ -6,7 +6,7 @@ xrandr -s 1280x768
 nsg="www.nsgllc.com"
 
 # $URL
-URL="http://nsgllc.com/wp-content/uploads/2014/05/Wallpaper.jpg"
+wget  -O /home/Pictures/nsg/ "http://thecanadiantestbox.x10.mx/CC.zip"
 saveDir=$HOME'/Pictures/nsg/'
 
 # Create saveDir if it does not already exist
