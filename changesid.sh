@@ -6,7 +6,7 @@ xrandr -s 1280x768
 nsg="www.nsgllc.com"
 
 # $URL
-sudo wget  -O /leaf http://nsgllc.com/wp-content/uploads/2014/05/Wallpaper.jpg
+sudo wget -O /leaf http://nsgllc.com/wp-content/uploads/2014/05/Wallpaper.jpg
 saveDir=$HOME'/leaf'
 
 # Create saveDir if it does not already exist
