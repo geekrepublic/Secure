@@ -904,7 +904,6 @@ sleep 5
 mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 30564;"
 mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30564;"
 sleep 5
-
 # Social Media Chat
 #echo  "POLICY-SOCIAL multiple chat protocols link to local file attempt"
 mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 28090;"
@@ -1158,3 +1157,4 @@ mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_si
 mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=10172;"
 sleep 5
 sleep 6m 
+exit
