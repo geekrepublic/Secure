@@ -1,4 +1,4 @@
-!/bin/bash/
+#!/bin/bash/
 #
 #Standard Rule Set
 #echo  "Absolute Software Computrace outbound connection"
