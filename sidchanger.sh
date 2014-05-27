@@ -613,5 +613,102 @@ sleep 5
 
 # File Executables
 
+#echo  "FILE-EXECUTABLE Microsoft Windows Authenticode signature verification bypass attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 26601;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=26601;"
+sleep 5
+#echo  "FILE-EXECUTABLE Microsoft Windows Authenticode signature verification bypass attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 26590;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=26590;"
+sleep 5
+#echo  "FILE-EXECUTABLE Microsoft Windows executable file save onto SMB share attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 26385;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=26385;"
+sleep 5
+#echo  "FILE-EXECUTABLE Ichitaro JSMISC32.dll dll-load exploit attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 26071;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=26071;"
+sleep 5
+#echo  "FILE-EXECUTABLE Ichitaro JSMISC32.dll dll-load exploit attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 326070;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=26070;"
+sleep 5
+
+
+
+
+#echo  "FILE-EXECUTABLE Microsoft Windows Authenticode signature verification bypass attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 25779;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=25779;"
+sleep 5
+#echo  "FILE-EXECUTABLE Microsoft Windows Authenticode signature verification bypass attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 25357;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=25357;"
+sleep 5
+#echo  "FILE-EXECUTABLE Microsoft Windows .NET Framework System.Uri.ReCreateParts System.Uri.PathAndQuery overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 25253;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=25253;"
+sleep 5
+#echo  "FILE-EXECUTABLE Microsoft Windows .NET Framework System.Uri.ReCreateParts System.Uri.PathAndQuery overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 25252;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=25252;"
+sleep 5
+#echo  "FILE-EXECUTABLE Microsoft Software Installer MSI binary file magic detected
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 25061;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=25061;"
+sleep 5
+#echo  "FILE-EXECUTABLE Microsoft .NET blacklisted method reflection sandbox bypass attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 24665;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=24665;"
+sleep 5
+#echo  "FILE-EXECUTABLE Microsoft .NET blacklisted method reflection sandbox bypass attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 24664;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=24664;"
+sleep 5
+
+# X11 Rule Set
+
+#echo  "X11 xdmcp query"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 517;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=517;"
+sleep 5
+#echo  "X11 xdmcp info query"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 1867;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=1867;"
+sleep 5
+#echo  "X11 MIT Magic Cookie detected"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 1225;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=1225;"
+sleep 5
+#echo  "X11 xopen"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 1226;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=1226;"
+sleep 5
+
+
+
+
+
+
+
+
+
+
+#echo  "DOS Linux kernel SCTP duplicate cookie denial of service attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 30326;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30326;"
+sleep 5
+#echo  "DOS Linux kernel SCTP duplicate cookie denial of service attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 30326;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30326;"
+sleep 5
+#echo  "DOS Linux kernel SCTP duplicate cookie denial of service attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 30326;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30326;"
+sleep 5
+#echo  "DOS Linux kernel SCTP duplicate cookie denial of service attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 30326;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30326;"
+sleep 5
 
 
