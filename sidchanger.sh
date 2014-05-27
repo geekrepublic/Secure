@@ -439,7 +439,9 @@ sleep 5
 mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 30253;"
 mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30253;"
 sleep 5
+
 # Google Chrome Rule Set
+
 #echo  "ABROWSER-CHROME Google Chrome net-internals uri fragment identifier XSS attempt"
 mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 23471;"
 mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=23471;"
@@ -633,10 +635,6 @@ sleep 5
 mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 326070;"
 mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=26070;"
 sleep 5
-
-
-
-
 #echo  "FILE-EXECUTABLE Microsoft Windows Authenticode signature verification bypass attempt"
 mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 25779;"
 mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=25779;"
@@ -685,30 +683,258 @@ mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_si
 mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=1226;"
 sleep 5
 
+# SQL Rule Set
 
-
-
-
-
-
-
-
-
-#echo  "DOS Linux kernel SCTP duplicate cookie denial of service attempt"
-mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 30326;"
-mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30326;"
+#echo  "SQL sa login failed"; flow:to_client,established; content:"Login failed for user 'sa'"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 688;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=688;"
 sleep 5
-#echo  "DOS Linux kernel SCTP duplicate cookie denial of service attempt"
-mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 30326;"
-mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30326;"
+#echo  "SQL Ingres Database uuid_from_char buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 12027;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=12027;"
 sleep 5
-#echo  "DOS Linux kernel SCTP duplicate cookie denial of service attempt"
-mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 30326;"
-mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30326;"
+#echo  "SQL SAP MaxDB shell command injection attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 13356;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=13356;"
 sleep 5
-#echo  "DOS Linux kernel SCTP duplicate cookie denial of service attempt"
-mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 30326;"
-mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30326;"
+#echo  "SQL IBM DB2 Universal Database xmlquery buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 14991;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=14991;"
 sleep 5
+#echo  "SQL WinCC DB default password security bypass attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 17044;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=17044;"
+sleep 5
+#echo  "SQL IBM DB2 DATABASE SERVER SQL REPEAT Buffer Overflow"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 17209;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=17209;"
+sleep 5
+
+# Multimedia Rule Set
+
+#echo  "FILE-MULTIMEDIA CCMPlayer m3u buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 26243;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=26243;"
+sleep 5
+#echo  "FILE-MULTIMEDIA CCMPlayer m3u buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 26242;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=26242;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Microsoft Windows DirectShow MPEG heap overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 25796;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=25796;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Microsoft Windows DirectShow MPEG heap overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 25795;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=25795;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Mozilla products Ogg Vorbis decoding memory corruption attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 25298;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=25298;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Mozilla products Ogg Vorbis decoding memory corruption attempt
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 25297;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=25297;"
+sleep 5
+#echo  "FILE-MULTIMEDIA AVI file chunk length integer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 24955;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=24955;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Apple QuickTime text track descriptors heap buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 24700;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=24700;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Apple QuickTime text track descriptors heap buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 24699;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=24699;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Adobe Flash Player MP4 sequence parameter set parsing overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 24672;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=24672;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Apple QuickTime MOV Atom length buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 24550;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=24550;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Apple QuickTime MOV Atom length buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 24549;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=24549;"
+sleep 5
+#echo  FILE-MULTIMEDIA VideoLAN VLC webm memory corruption attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 24283;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=24283;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Apple iTunes Extended M3U playlist record overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 23588;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=23588;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Apple iTunes Extended M3U playlist record overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 23587;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=23587;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Apple iTunes Extended M3U playlist record overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 23272;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=23272;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Apple iTunes Extended M3U playlist record overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 23271;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=23271;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Adobe Flash Player MP4 zero length atom"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 23098;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=23098;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Adobe Flash Player MP4 zero length atom"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 21342;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=21342;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Adobe Flash Player MP4 zero length atom"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 21341;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=21341;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Adobe Flash Player MP4 zero length atom"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 21340;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=21340;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Adobe Flash Player MP4 zero length atom""
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 21339;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=21339;"
+sleep 5
+#echo  "FILE-MULTIMEDIA AVI file chunk length integer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 21168;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=21168;"
+sleep 5
+#echo  "MULTIMEDIA RealNetworks RealPlayer mpeg width integer memory underflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 21112;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=21112;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Microsoft Windows DirectShow GraphEdt closed captioning memory corruption"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 21078;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=21078;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Microsoft Windows Media Player digital video recording buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 20734;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=20734;"
+sleep 5
+#echo  "FILE-MULTIMEDIA RealNetworks RealPlayer QCP parsing buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 20288;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=20288;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Adobe Flash Player MP4 sequence parameter set parsing overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 20227;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=20227;"
+sleep 5
+#echo  "FILE-MULTIMEDIA VideoLAN VLC webm memory corruption attemp"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 19883;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=19883;"
+sleep 5
+#echo  "FILE-MULTIMEDIA VideoLAN VLC Media Player libdirectx_plugin.dll AMV parsing buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 19169;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=19169;"
+sleep 5
+#echo  "FILE-MULTIMEDIA RealNetworks RealPlayer vidplin.dll avi header parsing execution attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 19127;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=19127;"
+sleep 5
+#echo  "FILE-MULTIMEDIA RealNetworks RealPlayer IVR handling heap buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 19126;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=19126;"
+sleep 5
+#echo  "FILE-MULTIMEDIA RealNetworks RealPlayer IVR handling heap buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 27103;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=27103;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Apple QuickTime enof atom parsing heap buffer overflow attempt""
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 27102;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=27102;"
+sleep 5
+#echo  "FILE-MULTIMEDIA RealNetworks RealPlayer RealMedia URL length buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 28962;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=28962;"
+sleep 5
+#echo  "FILE-MULTIMEDIA RealNetworks RealPlayer RealMedia URL length buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 28961;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=28961;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Adobe Flash Player memory corruption attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 29061"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=29061;"
+sleep 5
+#echo  "FILE-MULTIMEDIA WAV processing buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 29546"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=29546;"
+sleep 5
+#echo  "FILE-MULTIMEDIA WAV processing buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 29545;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=29545;"
+sleep 5
+#echo  "FILE-MULTIMEDIA WAV processing buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 29544;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=29544;"
+sleep 5
+#echo  "FILE-MULTIMEDIA WAV processing buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 29543;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=29543;"
+sleep 5
+#echo  "FILE-MULTIMEDIA WAV processing buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 29542;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=29542;"
+sleep 5
+#echo  "FILE-MULTIMEDIA WAV processing buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 29541;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=29541;"
+sleep 5
+#echo  "FILE-MULTIMEDIA WAV processing buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 29540;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=29540;"
+sleep 5
+#echo  "FILE-MULTIMEDIA WAV processing buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 29539;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=29539;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Adobe Flash Player memory corruption attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 30152;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30152;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Adobe Flash Player memory corruption attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 30151;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30151;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Adobe Flash Player memory corruption attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 30150;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=230150;"
+sleep 5
+#echo  "FILE-MULTIMEDIA CoCSoft Stream Download session"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 30532;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30532;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Apple QuickTime long rnet atom size buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 30565;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30565;"
+sleep 5
+#echo  "FILE-MULTIMEDIA Apple QuickTime long rnet atom size buffer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=2 WHERE sig_sid = 30564;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=30564;"
+sleep 5
+
+# Social Media Chat
+#echo  "POLICY-SOCIAL multiple chat protocols link to local file attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 28090;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=28090;"
+sleep 5
+#echo  "POLICY-SOCIAL multiple chat protocols link to local file attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 28089"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=28089;"
+sleep 5
+#echo  "POLICY-SOCIAL Pidgin MXIT emoticon integer overflow attempt"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 28088;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=28088;"
+sleep 5
+
+
+
+
+
+
 
 
