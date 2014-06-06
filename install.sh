@@ -2079,6 +2079,10 @@ echo  "Node"
 mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=1 WHERE sig_sid = 2008581;"
 mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=2008581;"
 sleep 5
+echo  "Dropbox Broadcast"
+mysql -N -B -uroot -Dsnorby -e "UPDATE signature SET sig_priority=3 WHERE sig_sid = 2012648;"
+mysql -N -B -uroot -Dsnorby -e "SELECT sig_id, sig_name, sig_priority, sig_sid FROM signature WHERE sig_sid=2012648;"
+sleep 5
 figlet FINISHED
 sleep 30
 exit
