@@ -15,6 +15,8 @@ sleep 5
 echo "Adding NSG to Root permissions"
 sudo usermod -a -G sudo nsg
 sleep 3
+echo "Running First Time Setup
+sudo soup
 echo "CHANGING SID SIGNATURES PLEASE WAIT"
 echo "GRAB A CUP OF COFFEE AND WAIT"
 #Standard Rule Set
